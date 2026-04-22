@@ -6,6 +6,10 @@ import { CallToolRequestSchema, ListToolsRequestSchema } from "@modelcontextprot
 const app = express();
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("🚀 ISPA-STAD MCP Server Aktif! Endpoint Claude berada di: /api/mcp");
+});
+
 // --- 1. SETUP SERVER MCP ---
 const server = new Server(
   { name: "ISPA-STAD-Pinterest", version: "1.0.0" },
